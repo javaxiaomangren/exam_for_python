@@ -1,6 +1,5 @@
 exam_for_python
 ===============
-<h3>Python工工程师初级笔试题</h3>
 1. 完成class Demo,使得以下条件满足:<br/>
 a = Demo() <br />
 b = Demo() <br />
