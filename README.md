@@ -7,6 +7,7 @@ Exam_for_python
 
     每个python对都继承了object，所以只要重写object 的__new__方法，改变其创建对象的方式。既然对Demo只能有一个内存地址，那么在创建对象的时候先判断
     Demo的实例是否存在，如果存在返回。(我靠，　这不是单例子模式吗？恍然大悟呀）
+    
         class Demo(object):
             def __new__(cls, *args, **kwargs):
                 it = cls.__dict__.get('__it__')
@@ -15,7 +16,7 @@ Exam_for_python
                 cls.__it__ = it = object.__new__(cls)
                 it.init(*args, **kwargs)
                 return it
-
+                
             def init(*args, **kwargs):
                 pass
 
