@@ -1,6 +1,7 @@
 Exam_for_python
 ===============
 1. 完成class Demo,使得以下条件满足:<br/>a = Demo() <br />b = Demo() <br />assert id(a) == id(b) <br />
+
     分析：id函数的作用是获取对象在内存中的地址，要使id(a) == id(b)，则对象a和b需要指向相同的内存地址。
     再看一下python创建对象的方式，python里的class会先调用__new__方法(There is no way to create a new instance without calling __new__)
 
@@ -47,6 +48,7 @@ Exam_for_python
 4. 用Python实现linux的用户和权限管理基本功能。
 
 5. 写一个简单的爬虫,把糗事百科今天被顶超过5000的帖子子爬出来,注意考虑性能和图片显示。
+
 
 6. 用Django+Nginx+Redis+BootStrap开发一个BBS,要求支持用户,板块,图片,发/编辑/删帖,留言等功能。考虑到用户量激增的可能性,将这个BBS切分成几个服务,配置Nginx将请求转发到不同服务;使用Redis为可能成为性能瓶颈的数据做缓存。
 
@@ -118,4 +120,8 @@ Exam_for_python
 > > > > 但> 只能放在行首才有效  
   
 ### 特殊字符处理  
+<<<<<<< HEAD
 有一些特殊字符如<,#等,只要在特殊字符前面加上转义字符\即可<br />  
+=======
+有一些特殊字符如<,#等,只要在特殊字符前面加上转义字符\即可<br />  
+>>>>>>> af4d1229fac864873b8ef2afa2efca8b2cb551a5
