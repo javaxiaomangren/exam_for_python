@@ -6,7 +6,7 @@ Exam_for_python
     再看一下python创建对象的方式，python里的class会先调用__new__方法(There is no way to create a new instance without calling __new__)
 
     每个python对都继承了object，所以只要重写object 的__new__方法，改变其创建对象的方式。既然对Demo只能有一个内存地址，那么在创建对象的时候先判断
-    Demo的实例是否存在，如果存在返回。(我靠，　这不是单例子模式吗？恍然大悟呀）
+    Demo的实例是否存在，如果存在返回。
     
         class Demo(object):
             def __new__(cls, *args, **kwargs):
@@ -52,7 +52,7 @@ Exam_for_python
 
 
 6. 用Django+Nginx+Redis+BootStrap开发一个BBS,要求支持用户,板块,图片,发/编辑/删帖,留言等功能。考虑到用户量激增的可能性,将这个BBS切分成几个服务,配置Nginx将请求转发到不同服务;使用Redis为可能成为性能瓶颈的数据做缓存。
-
+可以用位运算做权限控制,判断帖子的状态，顶火？？
 
 大标题  
 ===================================  
