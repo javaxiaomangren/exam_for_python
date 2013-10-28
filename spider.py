@@ -11,6 +11,9 @@ http://m2.qiushibaike.com/article/list/day?page=2&count=30&rqcnt=11
 http://m2.qiushibaike.com/appinfo?rqcnt=25
 http://m2.qiushibaike.com/article/list/suggest?page=1&count=30&rqcnt=26
 http://m2.qiushibaike.com/article/list/suggest?page=2&count=30&rqcnt=27
+
+
+http://www.douban.com/group/topic/44446641/
 """
 import json
 import urllib2
