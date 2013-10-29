@@ -11,7 +11,9 @@ http://blog.csdn.net/wuyuegb2312/article/details/8962418
 http://www.djangochina.cn/forum.php?mod=viewthread&tid=35
 """
 
+
 class Discount(object):
+
   def __init__(self):
     pass
   
