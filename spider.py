@@ -22,7 +22,7 @@ import thread
 
 def get_response(url, coding='utf-8'):
   try:
-    urllib2.urlopen(url, coding).read()
+    urllib2.urlopen(url, coding, timeout=120).read()
   except:
     pass
   
