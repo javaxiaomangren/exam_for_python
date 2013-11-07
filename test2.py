@@ -93,6 +93,11 @@ class SpecialClass(object):
         return setattr(cls, func.__name__, types.MethodType(func, cls))
 
 class Demo(object):
+    a = 1
+    user_name = "a"
+    def __init__(self, a, b):
+        self.a = a
+        self.b = b
 
     def hello(self):
         print "hello"
@@ -102,17 +107,16 @@ class Demo(object):
         self.__init__(*args, **kwargs)
 
     def __new__(cls, *args, **kwargs):
-        temp = cls.__dict__
-        for t in temp:
-            print t.capitalize(), "==>", temp[t]
-        values = cls.__dict__.values()
         it = object.__new__(cls)
-
         it.init(*args, **kwargs)
+        for t in cls.__dict__:
+            print t.capitalize(), "==>", cls.__dict__[t]
+        print it.__dict__
         return it
 
     def world(self):
         pass
-d = Demo()
+d = Demo("1", 2)
+print d.a
 # d.Hello()
 
