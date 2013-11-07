@@ -28,7 +28,7 @@ class SpecialClass(object):
 
 
 d = Demo2('windy', 123456)
-print Demo2.__dict__
+# print Demo2.__dict__
 
 
 """
@@ -79,3 +79,40 @@ http://pylint-messages.wikidot.com/messages:c0103
 #
 #
 #     http://docs.python.org/2/library/rlcompleter.html
+
+
+import copy
+
+class SpecialClass(object):
+    @classmethod
+    def removeVariable(cls, name):
+        return delattr(cls, name)
+
+    @classmethod
+    def addMethod(cls, func):
+        return setattr(cls, func.__name__, types.MethodType(func, cls))
+
+class Demo(object):
+
+    def hello(self):
+        print "hello"
+
+    def init(self, *args, **kwargs):
+        """inherited by subclass"""
+        self.__init__(*args, **kwargs)
+
+    def __new__(cls, *args, **kwargs):
+        temp = cls.__dict__
+        for t in temp:
+            print t.capitalize(), "==>", temp[t]
+        values = cls.__dict__.values()
+        it = object.__new__(cls)
+
+        it.init(*args, **kwargs)
+        return it
+
+    def world(self):
+        pass
+d = Demo()
+# d.Hello()
+
