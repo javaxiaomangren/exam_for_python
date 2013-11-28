@@ -50,6 +50,7 @@ Exam_for_python
     [fruit_diy.py](https://github.com/javaxiaomangren/exam_for_python/blob/master/fruit_diy.py)
 
 4. 用Python实现linux的用户和权限管理基本功能。
+    使用os模块或者subprocess模块完成，　
 
 5. 写一个简单的爬虫,把糗事百科今天被顶超过5000的帖子子爬出来,注意考虑性能和图片显示。
     url_template: http://www.qiushibaike.com/hot
