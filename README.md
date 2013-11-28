@@ -43,13 +43,22 @@ Exam_for_python
     [参考文档](http://www.python.org/download/releases/2.2/descrintro/)<br />
 
 2. 实现class Demo2,使得Demo2所有属性和方方法均自动变成CamelCase的形式。尽可能多写几种实现方式。<br />
-
+    把原有的方法和属性复制一份，使用CamelCase形式命名
+    [test2.py](https://github.com/javaxiaomangren/exam_for_python/blob/master/test2.py)
 
 3. 你是水果店的老板,店里新推出了DIY水果篮子的服务,可以让用户任意搭配不同品种和数量的水果,搭配完后还提供各种不同的打折服务。请用用Python实现一个计价程序,方方便收银。提醒:水果的品种、价格和打折的幅度可能随时调整。
+    [fruit_diy.py](https://github.com/javaxiaomangren/exam_for_python/blob/master/fruit_diy.py)
 
 4. 用Python实现linux的用户和权限管理基本功能。
 
 5. 写一个简单的爬虫,把糗事百科今天被顶超过5000的帖子子爬出来,注意考虑性能和图片显示。
+    url_template: http://www.qiushibaike.com/hot
+    使用两个队列，一个处理抓取任务，一个处理抓取图片，BeautifulSoup 解析html, 详见spider.py
+    开启多个线程去处理队列
+
+    出于好奇，我装了一个糗事百科的app,　在pc上装了一个finder,代理手机上网，拦截请求链接
+        http://m2.qiushibaike.com/article/list/latest?page=2&count=30&rqcnt=7
+       这个返回的结果是一个json，解析起来比较简单，但是翻页到60页以后很慢，翻到100的时候基本已经不行了
 
 
 6. 用Django+Nginx+Redis+BootStrap开发一个BBS,要求支持用户,板块,图片,发/编辑/删帖,留言等功能。考虑到用户量激增的可能性,将这个BBS切分成几个服务,配置Nginx将请求转发到不同服务;使用Redis为可能成为性能瓶颈的数据做缓存。
