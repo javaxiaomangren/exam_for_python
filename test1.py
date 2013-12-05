@@ -48,6 +48,19 @@ class Demo3(dict):
         except KeyError:
             return self.default
 
+
+class Demo4():
+
+    def __init__(self):
+        pass
+
+    @staticmethod    
+    def instance():
+        if not hasattr(Demo4, "_instance"):
+            Demo4._instance = Demo4()
+        return Demo4._instance
+
+
 if __name__ == "__main__":
     assert id(Demo()) == id(Demo())
     assert id(Demo1()) == id(Demo1())
@@ -55,5 +68,6 @@ if __name__ == "__main__":
     dicA = Demo3(dict(i=1, j=2))
     dicB = Demo3(dict(x="a", y="b"))
     assert id(dicB) == id(dicB)
+    assert id(Demo4.instance) == id(Demo4.instance)
     print "finished"
 
